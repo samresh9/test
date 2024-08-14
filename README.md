@@ -26,33 +26,13 @@ This backend service manages and indexes Environmental and Social resources, mak
 
 ## Table Of Content
 
-1. [Documentation](#documentation)
-2. [Installation](#installation) 
-3. [Runnig the App](#running-the-app) 
+1. [Installation](#installation) 
+2. [Runnig the App](#running-the-app) 
+3. [Documentation](#documentation)
 4. [Database Configuration](#database-migration-configuration-and-seeding) 
 5. [Configuration](#configuration)
 6. [Git Hooks](#git-hooks-and-husky)
 7. [Tests](#running-tests)
----
-## Documentation
-#### API Documentation
-
-The API documentation is provided using **Swagger**. It offers an interactive interface to explore and test the API endpoints, making it easier to understand the available functionalities.
-
-To access the API documentation with Swagger, navigate to the following route:
-  ```
- <baseUrl>/api/v1/docs
-```
-Replace <baseUrl> with the actual base URL of your application.
-
-#### Bull Dashboard
-For managing and monitoring job queues, you can access the Bull Dashboard, which provides an interface to view and control your queues.
-
-To access the Bull Dashboard, navigate to the following route:
- ```
- <baseUrl>/api/bull-board
-```
-Replace <baseUrl> with the actual base URL of your application.
 ---
 ## Installation
 Follow these steps to install and set up the Application:
@@ -87,11 +67,30 @@ $ mv .env.example .env
 Fill in all the required environment variables as specified in the 
 [Configuration](#configuration) section.
 
+5. **Node Version**
+Ensure that you are using Node.js version 20 or higher. If necessary, update your Node.js installation to meet this requirement. You can check your Node.js version with:
+```bash
+$ node -v
+```
 ---
 ## Running the App
 Follow these steps to run the application:
 
-1. **Start the Application** 
+1. **Run Database Migrations**
+After starting the application, run the following command to apply any pending database migrations:
+```bash
+$ yarn migration
+```
+This ensures your database schema is up-to-date with the current application structure.
+
+2. **Seed Initial Data**
+To populate the database with initial data (super admin accounts and other essential records such as role-permission data and more), run the seeder command:
+```bash
+$ yarn seed
+```
+This will execute the seeder scripts to insert predefined data into your database.
+
+3. **Start the Application** 
 Use one of the following commands based on your environment:
 
 ```bash
@@ -108,19 +107,30 @@ $ yarn run start:prod
 - start:dev: Runs the application in development mode with file watching for automatic restarts.
 - start:prod: Runs the application in production mode.
 
-2. **Run Database Migrations**
-After starting the application, run the following command to apply any pending database migrations:
-```bash
-$ yarn migration
-```
-This ensures your database schema is up-to-date with the current application structure.
 
-3. **Seed Initial Data**
-To populate the database with initial data (super admin accounts and other essential records such as role-permission data and more), run the seeder command:
-```bash
-$ yarn seed
+
+
+
+---
+## Documentation
+#### API Documentation
+
+The API documentation is provided using **Swagger**. It offers an interactive interface to explore and test the API endpoints, making it easier to understand the available functionalities.
+
+To access the API documentation with Swagger, navigate to the following route:
+  ```
+ <baseUrl>/api/v1/docs
 ```
-This will execute the seeder scripts to insert predefined data into your database.
+Replace <baseUrl> (http://localhost:3000) with the actual base URL of your application.
+
+#### Bull Dashboard
+For managing and monitoring job queues, you can access the Bull Dashboard, which provides an interface to view and control your queues.
+
+To access the Bull Dashboard, navigate to the following route:
+ ```
+ <baseUrl>/api/bull-board
+```
+Replace <baseUrl> (http://localhost:3000) with the actual base URL of your application.
 
 ---
 ## Database Migration Configuration and Seeding
@@ -141,7 +151,7 @@ Replace "migration_name" with a descriptive name for the migration, which will g
 2. **Run Migrations**   
 Apply the migrations to update your database schema:
 ```bash
-$ npm run migration
+$ yarn migration
 ```
 This command will execute all pending migrations, ensuring your database schema matches the current application code.
 
@@ -446,7 +456,7 @@ We utilize Husky, a Git hook tool, to enforce certain actions and maintain a con
 
 
 
-- **Pre-commit Hook**: We have setup the pre-commit hook that runs code formatting scripts and linters to ensure code consistency before committing changes.
+- **Pre-commit Hook**:  We have set up a pre-commit hook that runs code formatting scripts and linters to ensure code consistency before committing changes. This includes using lint-staged to check for linting errors, ensuring that only properly formatted and error-free code is committed.
 
 Please ensure that your code meets the required standards and passes the necessary checks before committing or pushing changes.
 
