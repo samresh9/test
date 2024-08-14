@@ -1,11 +1,11 @@
 
-# Project Title
+# About Project
 
 **E&S Sangraha**   
 A knowledge hub for environmental and social risk management in Nepal.
 ## Description
 E&S Sangraha is a comprehensive knowledge hub designed for environmental and social risk management in Nepal. It serves as a resource repository,
-offering a wide collection of documents and materials that can be managed through a Content Management System (CMS) and accessed via a web portal.
+offering a wide collection of documents and materials that can be managed through a **Content Management System (CMS)** and accessed via a **Web Portal**.
 
 The CMS component is tailored to different roles and permissions, enabling admins to create, publish, and unpublish resources within their respective organizations or projects. It provides full control over the management and distribution of these resources, ensuring that the right information is available to the right people.
 
@@ -22,16 +22,34 @@ On the other hand, the web portal is open to end-users, allowing them to search,
 
 This backend service manages and indexes Environmental and Social resources, making it easier to access and interact with the data through a well-documented API.
 
+## Table Of Content
+
+1. [Documentation](#documentation)
+2. [Installation](#installation) 
+3. [Runnig the App](#running-the-app) 
+4. [Database Configuration](#database-migration-configuration-and-seeding) 
+5. [Configuration](#configuration)
+6. [Git Hooks](#git-hooks-and-husky)
+7. [Tests](#running-tests)
 ## Documentation
-### API Documentation
+#### API Documentation
 
 The API documentation is provided using **Swagger**. It offers an interactive interface to explore and test the API endpoints, making it easier to understand the available functionalities.
 
-To access the API documentation, navigate to the following route in your browser:
+To access the API documentation with Swagger, navigate to the following route:
+  ```
+ <baseUrl>/api/v1/docs
+```
+Replace <baseUrl> with the actual base URL of your application.
 
-[Documentation](https://linktodocumentation)
+#### Bull Dashboard
+For managing and monitoring job queues, you can access the Bull Dashboard, which provides an interface to view and control your queues.
 
-
+To access the Bull Dashboard, navigate to the following route:
+ ```
+ <baseUrl>/api/bull-board
+```
+Replace <baseUrl> with the actual base URL of your application.
 ## Installation
 Follow these steps to install and set up the Application:
 
