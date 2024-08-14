@@ -1,13 +1,15 @@
-# test
+
 # Project Title
 
-A brief description of what this project does and who it's for
-
-
+**E&S Sangraha**   
+A knowledge hub for environmental and social risk management in Nepal.
 ## Description
+E&S Sangraha is a comprehensive knowledge hub designed for environmental and social risk management in Nepal. It serves as a resource repository,
+offering a wide collection of documents and materials that can be managed through a Content Management System (CMS) and accessed via a web portal.
 
-<!-- This project is the backend for the Environmental & Social Resource Hub, built with NestJS and TypeORM. It includes features such as database migration and seeding, job queues using Bull, document indexing with Elasticsearch and FSCrawler, file storage with MinIO, and more. -->
+The CMS component is tailored to different roles and permissions, enabling admins to create, publish, and unpublish resources within their respective organizations or projects. It provides full control over the management and distribution of these resources, ensuring that the right information is available to the right people.
 
+On the other hand, the web portal is open to end-users, allowing them to search, filter, and retrieve documents from the resource repository. Powered by Elasticsearch, the platform ensures fast, convenient, and accurate full-text search capabilities, making it easy for users to find the specific documents they need. This dual approach ensures that the E&S Sangraha is both a robust tool for administrators and an accessible resource for users.
 ### Key Technologies:
 
 - **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
