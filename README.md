@@ -22,6 +22,8 @@ On the other hand, the web portal is open to end-users, allowing them to search,
 
 This backend service manages and indexes Environmental and Social resources, making it easier to access and interact with the data through a well-documented API.
 
+---
+
 ## Table Of Content
 
 1. [Documentation](#documentation)
@@ -31,6 +33,7 @@ This backend service manages and indexes Environmental and Social resources, mak
 5. [Configuration](#configuration)
 6. [Git Hooks](#git-hooks-and-husky)
 7. [Tests](#running-tests)
+---
 ## Documentation
 #### API Documentation
 
@@ -50,6 +53,7 @@ To access the Bull Dashboard, navigate to the following route:
  <baseUrl>/api/bull-board
 ```
 Replace <baseUrl> with the actual base URL of your application.
+---
 ## Installation
 Follow these steps to install and set up the Application:
 
@@ -82,6 +86,8 @@ $ mv .env.example .env
 ```
 Fill in all the required environment variables as specified in the 
 [Configuration](#configuration) section.
+
+---
 ## Running the App
 Follow these steps to run the application:
 
@@ -115,6 +121,8 @@ To populate the database with initial data (super admin accounts and other essen
 $ yarn seed
 ```
 This will execute the seeder scripts to insert predefined data into your database.
+
+---
 ## Database Migration Configuration and Seeding
 
 ### Migration
@@ -162,6 +170,8 @@ Execute the following command to seed your database:
 $ yarn run seed
 ```
 This will insert the data defined in your seeder files into the database, ensuring that your application has the necessary data to function correctly.
+
+---
 <a id="configuration"></a>
 ## Configuration
 To run the application, you need to set up several services and provide configuration through environment variables. Below are the required environment variables and suggestions for installing the necessary services.
@@ -427,6 +437,8 @@ These variables should be defined in your environment or within a .env file to e
 
 NOTE:For more detail about Elasticsearch and FSCrawler setup, you can refer to the official FS Crawler Docker Compose guide to set up these services in containers:
 [Elasticsearch and FSCrawler with Docker Compose](https://fscrawler.readthedocs.io/en/latest/installation.html#using-docker-compose) 
+
+---
 ## Git Hooks and Husky
 
 
@@ -456,3 +468,5 @@ $ yarn run test:e2e
 ```bash
 $ yarn run test:cov
 ```
+
+---
