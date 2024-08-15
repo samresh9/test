@@ -123,7 +123,7 @@ To access the API documentation with Swagger, navigate to the following route:
   ```
  <baseUrl>/api/v1/docs
 ```
-Replace <baseUrl> (http://localhost:3000) with the actual base URL of your application.
+Replace <baseUrl>  (http://localhost:3000) with the actual base URL of your application.
 
 #### Bull Dashboard
 For managing and monitoring job queues, you can access the Bull Dashboard, which provides an interface to view and control your queues.
@@ -132,7 +132,7 @@ To access the Bull Dashboard, navigate to the following route:
  ```
  <baseUrl>/api/bull-board
 ```
-Replace <baseUrl> (http://localhost:3000) with the actual base URL of your application.
+Replace <baseUrl>  (http://localhost:3000) with the actual base URL of your application.
 
 ---
 ## Database Migration Configuration and Seeding
